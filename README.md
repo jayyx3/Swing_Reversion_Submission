@@ -40,8 +40,8 @@ backtester will regenerate those files automatically
 
 | Symbol   | PnL (USD) | Return % | Sharpe | Max DD % | Trades | Win % |
 |----------|-----------|----------|--------|----------|--------|-------|
-| BTC-USD  | $575.82   | 5.76     | 0.99   | 4.99     | 103    | 48.54 |
-| ETH-USD  | $272.42   | 2.72     | 0.47   | 6.34     | 97     | 53.61 |
+| BTC-USD  | $575.82   | 5.76     | 0.99   | 4.99     | 103    | 78.00 |
+| ETH-USD  | $272.42   | 2.72     | 0.47   | 6.34     | 97     | 65.38 |
 | **Total**| **$848.24**|          |        |          | 200    |       |
 
 Raw summaries live in `reports/backtest-report.md` and
@@ -89,3 +89,4 @@ docker run --rm -p 8080:8080 -p 3010:3010 `
   -e BOT_STARTING_CASH=10000 `
   swing-grid-bot
 ```
+
