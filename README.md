@@ -24,8 +24,8 @@ swing-grid-submission/
    └─ your_strategy.py
 ```
 
-Remove `analysis/cache/` before downloading if you prefer a smaller archive; the
-backtester will regenerate those files automatically
+Remove `analysis/cache/` before packaging if you prefer a smaller archive; the
+backtester will regenerate those files automatically.
 
 ## Strategy Snapshot
 
@@ -34,15 +34,17 @@ backtester will regenerate those files automatically
 - **Key parameters**: anchor 288, ATR 56, grid steps 4, ATR multiplier 1.1,
   base allocation 12%, max position 35%, $150 minimum order.
 - **Safeguards**: optional RSI filter, cooldown between fills, persistent rung
-  bookkeeping for orderly exits.
+  bookkeeping for orderly exits, and eager history preloading so indicators are
+  ready on the first live tick.
 
 ## Performance (2024-01-01 → 2024-06-30, Coinbase hourly via Yahoo Finance)
 
 | Symbol   | PnL (USD) | Return % | Sharpe | Max DD % | Trades | Win % |
 |----------|-----------|----------|--------|----------|--------|-------|
-| BTC-USD  | $575.82   | 5.76     | 0.99   | 4.99     | 103    | 78.00 |
-| ETH-USD  | $272.42   | 2.72     | 0.47   | 6.34     | 97     | 65.38 |
-| **Total**| **$848.24**|          |        |          | 200    |       |
+| BTC-USD  | $687.88   | 6.88     | 1.25   | 4.99     | 106    | 79.63 |
+| ETH-USD  | $272.42   | 2.72     | 0.50   | 6.34     | 97     | 65.38 |
+| **Total**| **$960.30**|          |        |          | 203    |       |
+
 
 Raw summaries live in `reports/backtest-report.md` and
 `reports/backtest_summary.json`; trade-by-trade and equity curves are stored in
@@ -89,4 +91,5 @@ docker run --rm -p 8080:8080 -p 3010:3010 `
   -e BOT_STARTING_CASH=10000 `
   swing-grid-bot
 ```
+
 
