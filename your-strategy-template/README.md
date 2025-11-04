@@ -1,6 +1,6 @@
-# Swing Reversion Grid Strategy
+# Swing Reversion Grid Strategy Template
 
-swing trading bot that accumulates into pullbacks and scales out
+Contest-ready swing trading bot that accumulates into pullbacks and scales out
 on recoveries around a long-term anchor price. The grid widens automatically when
 volatility rises, keeping risk controlled while staying active on Coinbase hourly
 data (January–June 2024).
@@ -31,6 +31,8 @@ Implementation lives in `your_strategy.py` and registers itself as `swing_grid`.
 | `min_order_notional` | 150 | Skip dust-sized orders |
 | `cooldown_minutes` | 30 | Rest period after a fill |
 | `use_rsi_filter` | false | Gate trades on RSI extremes |
+| `min_history_bars` | 288 | Minimum bars required before trading |
+| `preload_history_bars` | 420 | Bars fetched during `prepare()` to bypass warm-up |
 
 Override via environment variable `BOT_STRATEGY_PARAMS`, for example (PowerShell):
 
@@ -69,4 +71,3 @@ docker run --rm -p 8080:8080 -p 3010:3010 `
 - `Dockerfile` – container recipe ✔️
 - `requirements.txt` – dependency notes ✔️
 - `README.md` – documentation (this file) ✔️
-
