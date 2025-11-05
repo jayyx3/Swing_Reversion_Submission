@@ -1,0 +1,12 @@
+{
+  "anchor_period": 288,
+  "atr_period": 56,
+  "atr_multiplier": 1.1,
+  "base_allocation": 0.12,
+  "grid_steps": 4,
+  "max_position_fraction": 0.35,
+  "min_order_notional": 150,
+  "cooldown_minutes": 30,
+  "min_history_bars": 288,
+  "preload_history_bars": 450
+}

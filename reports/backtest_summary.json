@@ -1,0 +1,25 @@
+{
+  "BTC-USD": {
+    "symbol": "BTC-USD",
+    "starting_cash": 10000.0,
+    "ending_equity": 10705.435157086034,
+    "pnl": 705.4351570860345,
+    "return_pct": 7.05435157086034,
+    "sharpe_ratio": 1.2927949721996705,
+    "max_drawdown": 4.993751019156799,
+    "trade_count": 103,
+    "win_rate": 86.0
+  },
+  "ETH-USD": {
+    "symbol": "ETH-USD",
+    "starting_cash": 10000.0,
+    "ending_equity": 10142.155930332925,
+    "pnl": 142.15593033292498,
+    "return_pct": 1.4215593033292562,
+    "sharpe_ratio": 0.29720411562926685,
+    "max_drawdown": 6.480143574561089,
+    "trade_count": 94,
+    "win_rate": 63.26530612244898
+  },
+  "generated_at": "2025-11-05T17:49:10.854503+00:00"
+}
