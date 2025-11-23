@@ -1,3 +1,0 @@
-# Strategy-specific Python dependencies.
-# Base infrastructure requirements live in ../../base-bot-template/requirements.txt.
-# Add extra packages below if the strategy needs them.
